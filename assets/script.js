@@ -21,24 +21,34 @@ function startGame() {
 function setNextQuestion() {
     // get the current question from myQuestions
     var questionObject = myquestions[currentQuestion];
+    //indicates the correct answer
     var correctAnswer = myquestions[currentQuestion]["correct"];
 
+    //change the question to questionObject
     question.innerText = questionObject.question;
     
+    // 
     btnList.forEach(function(btnElement, index) {
+        //replace the btns wth answers property
         btnElement.innerText = myquestions[currentQuestion]["answer"][index];
         btnElement.setAttribute("id", `${index}`);
         btnElement.addEventListener('click', (e) => {
             selectAnswer(correctAnswer, e)
         })
-
     })
+
+    if(currentQuestion === 0){
+        selectAnswer.
+    }
 
     function nextQuestion() {
         console.log("next")
        // var questionObject = myquestions[currentQuestion, ++]
-       for (var i = 0; i < myquestions.currentQuestion; i++);
+       for (var i = 0; i < currentQuestion.length; i++);
     }
+
+    //if 
+
 
 }
 
