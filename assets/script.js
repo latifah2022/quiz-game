@@ -37,17 +37,15 @@ function setNextQuestion() {
         })
     })
 
-    if(currentQuestion === 0){
-        selectAnswer.
-    }
+     if(currentQuestion === 0){
+         
+        }
 
     function nextQuestion() {
         console.log("next")
        // var questionObject = myquestions[currentQuestion, ++]
        for (var i = 0; i < currentQuestion.length; i++);
     }
-
-    //if 
 
 
 }
