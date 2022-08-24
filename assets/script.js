@@ -37,9 +37,9 @@ function setNextQuestion() {
         })
     })
 
-     if(currentQuestion === 0){
+    //  if(currentQuestion === 0){
          
-        }
+    //     }
 
     function nextQuestion() {
         console.log("next")
@@ -103,7 +103,6 @@ var myquestions =  [
     }
 ]
 
-var score = 0;
 
 
 startButton.addEventListener('click', startGame)
