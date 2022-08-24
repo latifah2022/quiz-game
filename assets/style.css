@@ -61,7 +61,7 @@ main {
 }
 
 .btn:hover {
-    color: rgb(77, 19, 1);
+    color: rgb(122, 8, 8);
     /*background-color: green;*/
 }
 
@@ -88,6 +88,10 @@ main {
 }
 
 .hide {
+    display: none;
+}
+
+.highscoremenue {
     display: none;
 }
 
