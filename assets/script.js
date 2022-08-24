@@ -41,13 +41,11 @@ function setNextQuestion() {
          
     //     }
 
-    function nextQuestion() {
-        console.log("next")
-       // var questionObject = myquestions[currentQuestion, ++]
-       for (var i = 0; i < currentQuestion.length; i++);
-    }
-
-
+    // function nextQuestion() {
+    //     console.log("next")
+    //    var questionObject = myquestions[currentQuestion, i++]
+    //    for (var i = 0; i < currentQuestion.length; i++);
+    // }
 }
 
 
@@ -70,7 +68,7 @@ function timer() {
         timerCountEl.textContent = timerCount;
             if (timerCount === 0){
                 clearInterval(timer);
-                endGame()
+                //endGame()
             }
     }, 1000)
 }
