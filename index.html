@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <button class="scores">View Highscores</button>
+        <button class="highscores">View Highscores</button>
         <div class="timer">Time:
             <div class="timer-count">50</div>
         </div>
@@ -31,11 +31,19 @@
                     <button id="start-btn" class="start-btn">Start</button>
                    <!-- /* <button id="next" class="next-btn hide">Next</button>*/ -->
                 </div>
+                <div id="end" class="hide">
+                  <p>initials: <input type="text" id="initials" placeholder="AA"/> 
+                    <button id="submit">submit</button></p>  
+                </div>
             </div>
         </section>
+   
         <section class="highscoremenue">
             <h2 class="view">High Scores</h2>
-            <ol class="scores">scores</ol>
+            <ol class="scores">
+                <li><input type="text" id="initials"/></li>
+                <li></li>
+            </ol>
         </section>
 
     </main>
