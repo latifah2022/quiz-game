@@ -9,24 +9,9 @@ var myquestions =  [
         answer: [ "12", "24", "48", "72"],
         correct:"48"
     },
-    {
-        question: "What is the standard breakfast time?",
-        answer: [ "7am", "9pm", "12pm", "8pm"],
-        correct:"9am"
-    },
-    {
-        question: "What planet are we on?",
-        answer: [ "Mars", "Jupiter", "America", "Earth"],
-        correct: "Earth"
-    },
-    {
-        question: "What is the best programming language?",
-        answer: [ "Python", "Java", "Javascript", "Css"],
-        correct: "Javascript" 
-    }
+
 ]
 var startButton = document.getElementById('start-btn')
-//var nextButton = document.getElementById('next-btn')
 var questionContainerEl = document.getElementById('questions-container')
 var timerCountEl = document.querySelector(".timer-count")
 var question = document.getElementById("questions");
@@ -115,7 +100,6 @@ function selectAnswer(correctAnswerIndex,event) {
         setNextQuestion()
     } 
     
-    //currentQuestion++;
     if (currentQuestion === myquestions.length){
         endGame();    
     }else {
@@ -124,9 +108,11 @@ function selectAnswer(correctAnswerIndex,event) {
 }
 
 function viewScreen () {
+    var initials = JSON.parse(localStorage.getItem("initials"))
     console.log("high+scores")
     highscoremenue.setAttribute("style", "display:block")
     containerEl.setAttribute("style", "display:none")
+    highscoremenue.textContent = initials.initials + "  " + initials.score
 }
 
 function scoreList() {
@@ -165,9 +151,11 @@ submitButton.addEventListener("click", function(event) {
   if (initialsEl === "") {
     displayScore("error", "Please write initials");
   } else {
+    var highScores = {
+        initials: initialsEl,
+        score: timerCount,
+    }
+    localStorage.setItem("initials", JSON.stringify(highScores));
     viewScreen();
   }   
-
-    localStorage.setItem("initials", initialsEl);
-    viewScore();
 });
